@@ -1,8 +1,20 @@
 {
-  "name": "printfuse-v2",
-  "private": true,
+  "name": "fullstack-project",
+  "version": "1.0.0",
+  "description": "Full-stack project with Next.js frontend and Node.js backend",
   "scripts": {
-    "install-all": "npm install --prefix Backend",
-    "start": "node Backend/server.js"
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "install:all": "npm install -f && cd frontend && npm install -f && cd ../backend && npm install -f"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "next": "^15.3.1",
+    "nodemon": "^3.1.10"
   }
 }
