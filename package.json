@@ -1,20 +1,21 @@
 {
-  "name": "fullstack-project",
+  "name": "woocommerce-backend",
   "version": "1.0.0",
-  "description": "Full-stack project with Next.js frontend and Node.js backend",
+  "main": "app.js",
   "scripts": {
-    "frontend": "cd frontend && npm run dev",
-    "backend": "cd backend && npm run dev",
-    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "install:all": "npm install -f && cd frontend && npm install -f && cd ../backend && npm install -f"
-  },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
-    "next": "^15.3.1",
-    "nodemon": "^3.1.10"
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }
